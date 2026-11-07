@@ -1,0 +1,47 @@
+Project 01: Network Traffic Investigation
+
+1. Project Objective
+
+Analyze DNS traffic using Wireshark to understand how a computer resolves a domain name and communicates with a DNS server.
+
+2. Tools Used
+
+Wireshark
+
+DNS display filter
+
+macOS
+
+3. Investigation
+
+Domain investigated: example.com
+
+DNS query identified: example.com (DNS A record query)
+
+Source IP address: 172.16.227.112 (my computer)
+
+Destination IP address: 162.159.50.30 (DNS server)
+
+DNS transaction ID: 0x6a52 (response packet 1667)
+
+IP addresses returned by DNS:
+
+172.66.147.243
+
+104.20.23.154
+
+DNS response status: No error
+
+DNS response time: 103.852 milliseconds
+
+4. Findings
+
+The investigation identified a DNS request for example.com and its corresponding DNS response. The DNS server successfully returned two IPv4 addresses for the domain. This demonstrates that one domain name can resolve to multiple IP addresses.
+
+5. Security Relevance
+
+DNS analysis helps security analysts identify suspicious domain lookups, investigate potentially malicious connections, and understand network activity.
+
+6. Conclusion
+
+This exercise demonstrated how to capture and analyze DNS traffic using Wireshark. It also provided hands-on experience identifying DNS requests, examining responses, and documenting IP addresses and transaction IDs.
